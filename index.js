@@ -40,7 +40,7 @@ app.command("/slacky-ask", async ({
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                model: "meta/llama-3.1-8b-instant",
+                model: "meta/llama-3.1-8b-instruct",
                 messages: [{
                     role: "user",
                     content: question
@@ -49,7 +49,7 @@ app.command("/slacky-ask", async ({
         }
     );
     let data = await response.json();
-        await respond({
+    await respond({
         text: `Slacky says:\n\n${data.choices[0].message.content}`
     });
 });
