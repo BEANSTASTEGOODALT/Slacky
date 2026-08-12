@@ -41,7 +41,7 @@ app.command("/slacky-ask", async ({
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                model: "meta/llama-3.2-3b-instruct",
+                model: "meta/llama-3.1-8b-instant",
                 messages: [{
                     role: "user",
                     content: question
