@@ -29,7 +29,10 @@ app.command("/slacky-ask", async ({
     respond
 }) => {
     await ack();
-    let question = command.text.trim().split(' ')[0];
+    let split = command.text.trim().split(' ')[0];
+    split.slice(0, 1);
+    split.join(' ');
+    let question = split;
     let response = await fetch(
         "https://integrate.api.nvidia.com/v1/chat/completions", {
             method: "POST",
