@@ -29,7 +29,7 @@ app.command("/slacky-ask", async ({
     respond
 }) => {
     await ack();
-    let split = command.text.trim().split(' ')[0];
+    let split = command.text.trim().split(' ');
     split.slice(0, 1);
     split.join(' ');
     let question = split;
