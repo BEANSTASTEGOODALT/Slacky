@@ -5,8 +5,8 @@ const {
 } = require("@slack/bolt");
 
 const app = new App({
-    token: process.env.SLACK_BOT_TOKEN,
-    appToken: process.env.SLACK_APP_TOKEN,
+    token: SLACK_BOT_TOKEN,
+    appToken: SLACK_APP_TOKEN,
     socketMode: true
 });
 
@@ -36,7 +36,7 @@ app.command("/slacky-ask", async ({
         "https://integrate.api.nvidia.com/v1/chat/completions", {
             method: "POST",
             headers: {
-                "Authorization": `Bearer ${process.env.API_KEY}`,
+                "Authorization": `Bearer ${API_KEY}`,
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
