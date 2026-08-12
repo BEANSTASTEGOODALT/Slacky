@@ -1,4 +1,6 @@
 require("dotenv").config();
+// Hosting on Render currently, needs site to server backend
+const http = require("http");
 
 const {
     App
@@ -52,6 +54,14 @@ app.command("/slacky-ask", async ({
     await respond({
         text: `Slacky says:\n\n${data.choices[0].message.content}`
     });
+});
+
+
+http.createServer((req, res) => {
+  res.writeHead(200);
+  res.end("Slacky is running!");
+}).listen(3000, () => {
+  console.log(`Server working!`);
 });
 
 (async () => {
