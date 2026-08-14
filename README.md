@@ -16,4 +16,5 @@ SLACK_APP_TOKEN=xapp-token-here
 API_KEY=nvapi-api-key-here
 `
 \
+\
 then run `npm init -y && npm -i dotenv @slack/bolt` before running `node index.js` to start your own bot!
