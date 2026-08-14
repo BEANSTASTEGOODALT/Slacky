@@ -7,7 +7,7 @@ Meet Slacky, your friendly slackbot AI-powered companion! Simply ask a question 
 It uses a node backend to fetch the question from the Nvidia AI api and return the answer!
 
 # Setup your own
-Simply copy the repo, make a .env file in this format:
+Simply clone the repository, make a .env file in this format:
 \
 \
 `
