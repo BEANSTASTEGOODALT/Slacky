@@ -54,6 +54,24 @@ app.command("/slacky-ask", async ({
     });
 });
 
+app.command("/slacky-date", async ({
+    command,
+    ack,
+    respond
+}) => {
+    const options = { 
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    };
+
+    const result = new Date().toLocaleDateString(undefined, options);
+    await respond({
+        text: `The date today is ${result}`
+    });
+});
+
 (async () => {
     await app.start();
     console.log("bot is running!");
