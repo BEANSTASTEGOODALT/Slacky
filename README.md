@@ -6,6 +6,12 @@ Meet Slacky, your friendly slackbot AI-powered companion! Simply ask a question 
 
 It uses a node backend to fetch the question from the Nvidia AI api and return the answer!
 
+# Commands
+Slacky has 3 commands:
+* /slacky-ping - Returns whether the server is up, and the latency of the request/response
+* /slacky-ask [question] - fetches the answer to [question] from the Nvidia AI API
+* /slacky-date - returns the current date
+
 # Setup your own
 Simply clone the repository, make a .env file in this format:
 \
