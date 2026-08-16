@@ -59,6 +59,7 @@ app.command("/slacky-date", async ({
     ack,
     respond
 }) => {
+    await ack();
     const options = { 
       weekday: 'long',
       year: 'numeric',
